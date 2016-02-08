@@ -19,6 +19,11 @@ Este curso lo encuentras en:
 - Ejecución de metodos
 - Proyecto ejemplo
 
+# TEMA 02: CLASES Y OBJETOS
 
-
-
+- Declaración de variables
+- Declaración de métodos
+- Encapsulación
+- Constructor
+- Destructor
+- Proyecto ejemplo
