@@ -1,3 +1,7 @@
+![JAVA-OO](https://raw.githubusercontent.com/gcoronelc/CURSO-JAVA-OO/master/img/curso.png)
+
+
+
 # JAVA ORIENTADO A OBJETOS
 
 Material del curso de Java Orientado a Objetos
