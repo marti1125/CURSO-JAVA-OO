@@ -5,6 +5,7 @@
  */
 package pe.todobarato.pedidoapp.layer.view;
 
+import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 import pe.todobarato.pedidoapp.layer.service.PedidoService;
 
@@ -72,20 +73,25 @@ public class PedidoView extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
   private void btnProcesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcesarActionPerformed
-    // Dato
-    double importe;
-    importe = Double.parseDouble(txtImporte.getText());
-    // Proceso
-    PedidoService pedidoService;
-    pedidoService = new PedidoService();
-    double impuesto = pedidoService.calcularImpuesto(importe);
-    double total = pedidoService.calcularTotal(importe);
-    // Reporte
-    String repo = "";
-    repo += "Importe: " + importe + "\n";
-    repo += "Impuesto: " + impuesto + "\n";
-    repo += "Total: " + total + "\n";
-    JOptionPane.showMessageDialog(rootPane, repo);
+    try {
+        // Dato
+        double importe;
+        importe = Double.parseDouble(txtImporte.getText());
+        // Proceso
+        PedidoService pedidoService;
+        pedidoService = new PedidoService();
+        double impuesto = pedidoService.calcularImpuesto(importe);
+        double total = pedidoService.calcularTotal(importe);
+        // Reporte
+        String repo = "";
+        repo += "Importe: " + importe + "\n";
+        repo += "Impuesto: " + Math.round(impuesto * 100.0) / 100.0 + "\n";
+        repo += "Total: " + total + "\n";
+        JOptionPane.showMessageDialog(rootPane, repo); 
+    } catch(HeadlessException | NumberFormatException ex) {
+         JOptionPane.showMessageDialog(rootPane, "<html><div color=red>" + ex.toString(), "ERROR", JOptionPane.ERROR_MESSAGE);
+    }
+    
   }//GEN-LAST:event_btnProcesarActionPerformed
 
   /**
