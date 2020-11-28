@@ -38,15 +38,15 @@ public class EmpleadoDto {
    }
    
 
-   @Override
+   /*@Override
    public int hashCode() {
       int hash = 3;
       hash = 97 * hash + Objects.hashCode(this.nombre);
       hash = 97 * hash + Objects.hashCode(this.sueldo);
       return hash;
-   }
+   }*/
 
-   @Override
+   /*@Override
    public boolean equals(Object obj) {
       if (this == obj) {
          return true;
@@ -65,6 +65,6 @@ public class EmpleadoDto {
          return false;
       }
       return true;
-   }
+   }*/
 
 }

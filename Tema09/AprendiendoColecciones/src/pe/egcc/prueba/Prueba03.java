@@ -21,6 +21,7 @@ public class Prueba03 {
       EmpleadoDto dtoGustavo = new EmpleadoDto("Gustavo", 20000.0);
       lista.add(dtoGustavo);
       lista.add(dtoGustavo);
+      lista.add(dtoGustavo);
       lista.add(new EmpleadoDto("Karla", 10000.0));
       lista.add(new EmpleadoDto("Angel", 15000.0));
       lista.add(new EmpleadoDto("Delia", 18000.0));
